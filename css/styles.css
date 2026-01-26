@@ -623,23 +623,13 @@ ul {
         /* Tighter line height for multi-line button text */
     }
 
-    padding: 30px 20px;
-}
 
-/* 7. Buttons */
-.cta-primary {
-    width: 100%;
-    padding: 20px 0;
-    font-size: 1.1rem;
-    display: flex;
-}
+    /* 8. Spacing Adjustments */
+    .section-padding {
+        padding: 60px 0;
+    }
 
-/* 8. Spacing */
-.section-padding {
-    padding: 60px 0;
-}
-
-.big-reveal {
-    padding: 40px 20px;
-}
+    .big-reveal {
+        padding: 40px 20px;
+    }
 }
