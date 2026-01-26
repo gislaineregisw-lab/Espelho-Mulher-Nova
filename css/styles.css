@@ -1,0 +1,645 @@
+/* =========================================
+   1. VARIABLES & RESET (LUXURY V3 - REAL TEXTURES)
+   ========================================= */
+:root {
+    /* Palette */
+    --color-gold: #D4AF37;
+    --color-gold-hover: #E5C158;
+    --color-rose: #C97BA5;
+    --color-peach: #E8B4C8;
+    --color-jade: #6B8E99;
+    --color-cyan: #06B6D4;
+    --color-purple: #8B5CF6;
+
+    --color-dark: #2D3E45;
+    --color-light: #F9F7F4;
+    /* Cream base */
+    --color-white: #FFFFFF;
+
+    /* Gradients */
+    --gradient-overlay: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(201, 123, 165, 0.3) 100%);
+    --gradient-rose-jade: linear-gradient(135deg, rgba(201, 123, 165, 0.08) 0%, rgba(107, 142, 153, 0.08) 100%);
+
+    /* Fonts (Massive) */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Cormorant Garamond', serif;
+
+    /* Spacing */
+    --container-width: 1240px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 18px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    line-height: 1.9;
+    background-color: var(--color-light);
+    overflow-x: hidden;
+}
+
+/* Typography (Magazine Scale) */
+h1 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: clamp(3.5rem, 7vw, 5.5rem);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bold-gold {
+    font-weight: 600;
+    color: var(--color-gold);
+}
+
+.section-padding {
+    padding: 120px 0;
+}
+
+/* Buttons */
+.cta-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--color-gold);
+    color: #1F2937;
+    padding: 22px 60px;
+    border-radius: 6px;
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.5);
+    background: var(--color-gold-hover);
+}
+
+.pulsing-dot {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =========================================
+   2. CUSTOM TEXTURES (REAL IMAGES + OVERLAY)
+   ========================================= */
+
+/* Paper Texture (Base) - 95% White Overlay */
+.bg-paper {
+    background-color: var(--color-light);
+    background-image: linear-gradient(rgba(249, 247, 244, 0.95), rgba(249, 247, 244, 0.95)), url('../assets/images/texture-paper.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Marble/Terrain Sutil - 92% White Overlay */
+.bg-marble {
+    background-color: var(--color-light);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('../assets/images/texture-marble.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Gold Flowers (Transition) - 90% White Overlay */
+.bg-gold-flowers {
+    background-color: #FFF;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../assets/images/texture-flowers.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Geo Turquoise (Science/Bridge) - 92% White Overlay */
+.bg-geo-turq {
+    background-color: white;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('../assets/images/texture-geo.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Gold Particles / Bokeh (Value/Hero Overlay) - 90% White Overlay */
+.bg-bokeh {
+    background-color: white;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../assets/images/texture-bokeh.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Testimonials Horizontal Scroll */
+.marquee-wrapper {
+    width: 100%;
+    /* Removed mask to prevent cut-off issues */
+}
+
+.marquee-content {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 5%;
+    /* Side padding for better centering */
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scroll iOS */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.marquee-content::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.testimonial-card-marquee {
+    width: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card-marquee:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-gold);
+}
+
+
+/* Neuro Science Grid */
+.science-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Fixed 2 columns for 1,2 / 3,4 layout */
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.neuro-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 16px;
+    padding: 40px 30px;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.neuro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    border-color: var(--color-gold);
+}
+
+.neuro-step {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(212, 175, 55, 0.1);
+    font-family: var(--font-heading);
+    line-height: 1;
+}
+
+.neuro-title {
+    font-size: 1.5rem;
+    color: var(--color-dark);
+    margin: 20px 0 10px;
+    font-family: var(--font-heading);
+}
+
+.neuro-desc {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* FAQ Behavior */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    /* Gold Border */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 0 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.faq-item:hover {
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
+    border-color: var(--color-gold);
+    transform: translateY(-2px);
+}
+
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    /* Larger Title */
+    font-weight: 600;
+    /* Bold */
+    color: var(--color-dark);
+}
+
+.faq-header span {
+    font-size: 1.8rem;
+    color: var(--color-gold);
+    font-weight: 300;
+}
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    border-top: 1px solid transparent;
+}
+
+.faq-content.open {
+    padding-bottom: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 20px;
+    font-size: 1.2rem;
+    /* Readability */
+    color: #4B5563;
+}
+
+/* =========================================
+   3. SECTIONS
+   ========================================= */
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(201, 123, 165, 0.2) 100%);
+    z-index: 1;
+}
+
+.hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 1000px;
+    padding-left: 40px;
+}
+
+/* Recognition Grid */
+.recognition-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.pain-card {
+    background: white;
+    border: 1px solid rgba(201, 123, 165, 0.2);
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.pain-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(201, 123, 165, 0.15);
+    border-color: var(--color-rose);
+}
+
+/* Feature / Value Cards */
+.feature-grid,
+.value-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.feature-card,
+.value-card {
+    background: white;
+    padding: 50px 30px;
+    border-radius: 12px;
+    border-top: 3px solid var(--color-gold);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    transition: transform 0.4s ease;
+}
+
+.feature-card:hover,
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* Special Content Boxes */
+.quote-box {
+    border-left: 4px solid var(--color-gold);
+    padding: 50px;
+    background: white;
+    font-style: italic;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.02);
+}
+
+.breathing-section {
+    background: var(--gradient-rose-jade);
+    padding: 80px;
+    border-left: 4px solid var(--color-gold);
+    border-radius: 8px;
+    font-style: italic;
+}
+
+.big-reveal {
+    background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05), transparent 70%);
+    border: 1px solid var(--color-gold);
+    padding: 60px;
+    text-align: center;
+    margin-top: 80px;
+    border-radius: 16px;
+}
+
+/* Animations */
+@keyframes rotateSlow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Frame Container */
+.frame-container {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.photo-img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Responsive */
+@media(max-width:1200px) {
+    .recognition-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width:768px) {
+
+    /* 1. Global Reset for Mobile */
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 20px;
+        overflow: hidden;
+    }
+
+    /* 2. Typography Scaling (Increased for Readability) */
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        word-wrap: break-word;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+    }
+
+    /* Slightly larger */
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    /* Larger */
+    p {
+        font-size: 1.25rem;
+        line-height: 1.6;
+    }
+
+    /* Increased from 1.1rem to 1.25rem */
+
+    /* 3. Hero Adjustments */
+    .hero {
+        min-height: auto;
+        padding: 120px 0 80px 0;
+        text-align: center;
+        display: block;
+    }
+
+    .hero-content {
+        padding-left: 0;
+        max-width: 100%;
+    }
+
+    /* 4. Grid Stacking (Force 1 Column) */
+    .recognition-grid,
+    .feature-grid,
+    .value-stack-grid,
+    .science-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* 5. Authority Section */
+    .container[style*="flex"] {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .frame-container {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+    }
+
+    .photo-img {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* 6. Marquee & Cards */
+    .testimonial-card-marquee {
+        width: 85vw;
+        padding: 20px;
+    }
+
+    .pain-card,
+    .feature-card,
+    .value-card {
+        padding: 30px 20px;
+    }
+
+    /* 7. Buttons (Optimized Size) */
+    .cta-primary {
+        width: 100%;
+        padding: 18px 10px;
+        /* Reduced vertical padding */
+        font-size: 1.1rem;
+        /* Balanced font size */
+        display: flex;
+        line-height: 1.2;
+        /* Tighter line height for multi-line button text */
+    }
+
+    padding: 30px 20px;
+}
+
+/* 7. Buttons */
+.cta-primary {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 1.1rem;
+    display: flex;
+}
+
+/* 8. Spacing */
+.section-padding {
+    padding: 60px 0;
+}
+
+.big-reveal {
+    padding: 40px 20px;
+}
+}

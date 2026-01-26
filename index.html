@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Missão | Meditação Premium</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- 1. HERO SECTION (piclumen + particles) -->
+    <section class="hero" style="background-image: url('assets/images/piclumen-1742171306757.png');">
+        <div class="hero-overlay"></div>
+        <div class="hero-overlay"
+            style="background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, transparent 80%); mix-blend-mode: screen;">
+        </div> <!-- Bokeh Effect -->
+
+        <!-- SVG Interactive Particles (Simulated) -->
+        <svg class="hero-particles" width="100%" height="100%">
+            <circle cx="15%" cy="25%" r="2" fill="#D4AF37">
+                <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="85%" cy="65%" r="3" fill="#D4AF37">
+                <animate attributeName="opacity" values="0;1;0" dur="6s" repeatCount="indefinite" />
+            </circle>
+            <path d="M50 50 L60 60" stroke="#D4AF37" stroke-width="0.5" opacity="0.6">
+                <animateTransform attributeName="transform" type="translate" from="0 0" to="10 10" dur="8s"
+                    repeatCount="indefinite" />
+            </path>
+        </svg>
+
+        <div class="container hero-content">
+            <!-- Logo -->
+            <img src="assets/images/logo-nova.png" alt="Logo Mestra Gi"
+                style="max-width: 150px; margin-bottom: 20px; display: block;">
+
+            <h3
+                style="color: rgba(255,255,255,0.9); font-size: 1.5rem; text-transform: uppercase; letter-spacing: 2px;">
+                Mulher… você sente que nasceu para algo maior?</h3>
+            <h1>Ative Centro de Poder em 30 Minutos</h1>
+            <p style="color: rgba(255,255,255,0.95); font-size: 1.4rem; max-width: 800px;">
+                Meditação guiada para mulheres que querem reconhecer o próximo passo verdadeiro da sua missão.
+                Se você sente o chamado, mas ainda falta clareza, essa prática é para você.
+            </p>
+
+            <a href="#offer" class="cta-primary" style="margin-top: 30px;">
+                <div class="pulsing-dot"></div>
+                QUERO DESPERTAR MINHA MISSÃO AGORA
+            </a>
+
+            <div style="display: flex; gap: 30px; margin-top: 40px; color: rgba(255,255,255,0.9);">
+                <span>✓ Acesso Imediato</span>
+                <span>✓ Áudio Guiado</span>
+                <span>✓ Garantia 7 Dias</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. RECOGNITION (Dores) - BG Paper -->
+    <section class="section-padding bg-paper">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 80px;">Se você chegou até aqui, provavelmente você já
+                sentiu...</h2>
+
+            <div class="recognition-grid">
+                <!-- Card 1: Frustração (Fragmented Circle) -->
+                <div class="pain-card">
+                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="2"
+                        style="margin-bottom: 20px;">
+                        <circle cx="50" cy="50" r="40" stroke-dasharray="60 30" opacity="0.8" />
+                        <circle cx="50" cy="50" r="30" stroke-dasharray="10 10" opacity="0.5" />
+                        <circle cx="50" cy="50" r="5" fill="#D4AF37" />
+                    </svg>
+                    <p>A frustração de não saber qual é seu verdadeiro propósito.</p>
+                </div>
+                <!-- Card 2: Potencial (Diamond Star) -->
+                <div class="pain-card">
+                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="2"
+                        style="margin-bottom: 20px;">
+                        <path d="M50 10 L60 40 L90 50 L60 60 L50 90 L40 60 L10 50 L40 40 Z" />
+                        <path d="M50 25 L55 45 L75 50 L55 55 L50 75 L45 55 L25 50 L45 45 Z" opacity="0.5" />
+                    </svg>
+                    <p>A sensação de estar desperdiçando seu potencial.</p>
+                </div>
+                <!-- Card 3: Medo/Tempo (Hourglass/Infinity) -->
+                <div class="pain-card">
+                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="2"
+                        style="margin-bottom: 20px;">
+                        <path d="M30 20 L70 20 L50 50 L70 80 L30 80 L50 50 Z" stroke-linejoin="round" />
+                        <line x1="30" y1="20" x2="70" y2="20" stroke-width="4" />
+                        <line x1="30" y1="80" x2="70" y2="80" stroke-width="4" />
+                        <circle cx="50" cy="50" r="2" fill="#D4AF37" />
+                    </svg>
+                    <p>O medo de que já esteja tarde demais para recomeçar.</p>
+                </div>
+                <!-- Card 4: Confusão (Spiral) -->
+                <div class="pain-card">
+                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="2"
+                        style="margin-bottom: 20px;">
+                        <path
+                            d="M50 50 m-5 0 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0 m-10 0 a 15 15 0 1 0 30 0 a 15 15 0 1 0 -30 0 m-10 0 a 25 25 0 1 0 50 0 a 25 25 0 1 0 -50 0" />
+                    </svg>
+                    <p>A confusão entre tantos caminhos possíveis.</p>
+                </div>
+                <!-- Card 5: Dúvida (Eye/Vision) -->
+                <div class="pain-card">
+                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="2"
+                        style="margin-bottom: 20px;">
+                        <path d="M10 50 Q50 10 90 50 Q50 90 10 50 Z" />
+                        <circle cx="50" cy="50" r="15" />
+                        <circle cx="50" cy="50" r="5" fill="#D4AF37" />
+                    </svg>
+                    <p>A dúvida: "Será que tenho realmente uma missão?"</p>
+                </div>
+            </div>
+
+            <div class="breathing-section text-center" style="margin-top: 80px;">
+                <h3>"Respira fundo. Você não está atrasada. <br>Você está no tempo certo do seu despertar."</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. BRIDGE (Transição) - BG Geo Turq -->
+    <!-- 3. BRIDGE (Transição) - BG Geo Turq -->
+    <section class="section-padding bg-geo-turq text-center">
+        <div class="container" style="max-width: 900px;">
+            <div
+                style="border: 1px solid #D4AF37; padding: 60px 40px; border-radius: 8px; background: rgba(255,255,255,0.95); box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                <p style="font-size: 1.3rem; margin-bottom: 30px;">
+                    Você não precisa de mais informação.<br>
+                    <span style="font-size: 1rem; opacity: 0.8;">Você já leu livros. Já fez cursos. Já tentou "encontrar
+                        seu propósito".</span>
+                </p>
+                <div style="width: 50px; height: 1px; background: #D4AF37; margin: 0 auto 30px;"></div>
+                <h3 style="color: var(--color-dark); font-size: 1.8rem; line-height: 1.4;">
+                    O que você precisa é de uma <strong style="color: var(--color-rose);">experiência</strong> que
+                    desperte sua sabedoria interior.
+                </h3>
+                <p style="margin-top: 20px; font-style: italic;">
+                    E é exatamente isso que a Meditação <strong style="color: var(--color-gold);">"Despertar da Missão
+                        de Vida"</strong> faz.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. WHAT IS (Proposta) - BG Paper + Cream -->
+    <section class="section-padding bg-paper">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 80px;">
+                <h2>Esta não é mais uma meditação de relaxamento</h2>
+                <p>Esta é uma ativação neurocientífica-espiritual de 30 minutos.</p>
+            </div>
+
+            <div class="feature-grid">
+                <!-- Mental -->
+                <div class="feature-card">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" stroke="#8B5CF6" stroke-width="3"
+                        style="margin-bottom: 20px;">
+                        <circle cx="50" cy="50" r="40" stroke-dasharray="4 4" />
+                        <path d="M30 30 Q50 50 70 30 M30 70 Q50 50 70 70" />
+                    </svg>
+                    <h3 style="color: #8B5CF6;">Mental</h3>
+                    <p>Limpa crenças limitantes e instala clareza sobre seu propósito.</p>
+                </div>
+                <!-- Emotional -->
+                <div class="feature-card">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" stroke="#EC4899" stroke-width="3"
+                        style="margin-bottom: 20px;">
+                        <path d="M50 85 Q20 50 50 15 Q80 50 50 85 Z" />
+                        <circle cx="50" cy="40" r="5" fill="#EC4899" stroke="none" />
+                    </svg>
+                    <h3 style="color: #EC4899;">Emocional</h3>
+                    <p>Ativa gratidão antecipada e magnetiza sua missão.</p>
+                </div>
+                <!-- Energetic -->
+                <div class="feature-card">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" stroke="#06B6D4" stroke-width="3"
+                        style="margin-bottom: 20px;">
+                        <circle cx="50" cy="50" r="35" />
+                        <line x1="50" y1="5" x2="50" y2="95" stroke-dasharray="2 2" />
+                    </svg>
+                    <h3 style="color: #06B6D4;">Energético</h3>
+                    <p>Alinha seu campo de possibilidades com sincronicidades.</p>
+                </div>
+            </div>
+
+            <!-- RESULTS LIST -->
+            <div class="section-padding" style="padding-bottom: 0;">
+                <h3 class="text-center" style="margin-bottom: 50px;">Nos próximos 7 a 21 dias, você perceberá:</h3>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+                    <div>
+                        <svg width="70" height="70" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="3">
+                            <path d="M50 10 L60 40 L90 40 L65 60 L75 90 L50 70 L25 90 L35 60 L10 40 L40 40 Z" />
+                        </svg>
+                        <p class="bold-gold">Sinais Claros</p>
+                    </div>
+                    <div>
+                        <svg width="70" height="70" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="3">
+                            <circle cx="35" cy="50" r="25" />
+                            <circle cx="65" cy="50" r="25" />
+                        </svg>
+                        <p class="bold-gold">Sincronicidades</p>
+                    </div>
+                    <div>
+                        <svg width="70" height="70" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="3">
+                            <path d="M30 40 Q50 10 70 40 V60 H30 Z" />
+                            <rect x="40" y="60" width="20" height="10" />
+                        </svg>
+                        <p class="bold-gold">Insights</p>
+                    </div>
+                    <div>
+                        <svg width="70" height="70" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="3">
+                            <rect x="30" y="20" width="40" height="60" />
+                            <path d="M50 20 V80" />
+                        </svg>
+                        <p class="bold-gold">Portas Abertas</p>
+                    </div>
+                    <div>
+                        <svg width="70" height="70" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="3">
+                            <circle cx="50" cy="50" r="10" fill="#D4AF37" />
+                            <line x1="50" y1="10" x2="50" y2="30" />
+                            <line x1="50" y1="70" x2="50" y2="90" />
+                            <line x1="10" y1="50" x2="30" y2="50" />
+                            <line x1="70" y1="50" x2="90" y2="50" />
+                        </svg>
+                        <p class="bold-gold">Certeza Interna</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. JOURNEY (Narrativa) - BG Gold Flowers -->
+    <section class="section-padding bg-gold-flowers" style="position: relative;">
+        <!-- River SVG -->
+        <svg style="position: absolute; top:0; left:50%; transform:translateX(-50%); height:100%; opacity:0.1; pointer-events:none;"
+            viewBox="0 0 200 1000" preserveAspectRatio="none">
+            <path d="M100,0 C180,200 20,400 100,600 C180,800 100,1000 100,1000" fill="none" stroke="#D4AF37"
+                stroke-width="4" />
+        </svg>
+
+        <div class="container text-center" style="max-width: 800px;">
+            <h2>O que você vai sentir durante esta jornada:</h2>
+            <div
+                style="background: rgba(255,255,255,0.9); padding: 50px; border-radius: 12px; backdrop-filter: blur(5px); text-align: left;">
+                <p>"Nos primeiros minutos, você sentirá seu corpo relaxar e sua mente aquietar."</p>
+                <p>"Conforme avançamos, uma sensação de clareza começa a emergir — como se uma névoa estivesse se
+                    dissipando."</p>
+                <p>"Você será guiada através de visualizações poderosas, decretos de ativação e um momento sagrado de
+                    silêncio receptivo."</p>
+
+                <div class="quote-box"
+                    style="display: flex; gap: 30px; align-items: center; background: linear-gradient(to right, #FFF, #FFF0F5);">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="2">
+                        <path d="M10 50 Q50 20 90 50 Q50 80 10 50 Z" />
+                        <circle cx="50" cy="50" r="15" />
+                        <circle cx="50" cy="50" r="5" fill="#D4AF37" />
+                    </svg>
+                    <div>
+                        <h4 style="margin: 0; color: var(--color-gold);">E no final?</h4>
+                        <p style="margin: 0;">Você volta com uma certeza. Não algo que você "pensa" — é algo que você
+                            sente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FOR/AGAINST - BG Paper -->
+    <section class="section-padding bg-paper">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px;">
+                <!-- Column 1 -->
+                <div>
+                    <div class="text-center" style="margin-bottom: 30px;">
+                        <svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="#10B981" stroke-width="4">
+                            <circle cx="50" cy="50" r="45" />
+                            <path d="M30 50 L45 65 L70 35" />
+                        </svg>
+                        <h3 style="color: #10B981; margin-top: 20px;">Esta meditação é para você se:</h3>
+                    </div>
+                    <ul>
+                        <li style="margin-bottom: 15px;">✓ Você sente que tem uma missão maior</li>
+                        <li style="margin-bottom: 15px;">✓ Quer clareza sem depender de externos</li>
+                        <li style="margin-bottom: 15px;">✓ Está pronta para receber sinais</li>
+                    </ul>
+                </div>
+                <!-- Column 2 -->
+                <div>
+                    <div class="text-center" style="margin-bottom: 30px;">
+                        <svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="#EF4444" stroke-width="4">
+                            <circle cx="50" cy="50" r="45" />
+                            <path d="M30 30 L70 70 M70 30 L30 70" />
+                        </svg>
+                        <h3 style="color: #EF4444; margin-top: 20px;">NÃO é para você se:</h3>
+                    </div>
+                    <ul>
+                        <li style="margin-bottom: 15px;">❌ Espera fórmula mágica sem prática</li>
+                        <li style="margin-bottom: 15px;">❌ Não quer olhar para dentro</li>
+                        <li style="margin-bottom: 15px;">❌ Quer que decidam por você</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. VALUE STACK - BG Bokeh -->
+    <section id="offer" class="section-padding bg-bokeh" style="background-color: white;">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 80px;">O que você recebe ao acessar agora:</h2>
+
+            <div class="value-stack-grid">
+                <!-- 1 -->
+                <div class="value-card">
+                    <svg width="90" height="90" viewBox="0 0 100 100" fill="none" stroke="#C97BA5" stroke-width="3"
+                        style="margin-bottom: 25px;">
+                        <path d="M20 50 V40 C20 10 80 10 80 40 V50" />
+                        <rect x="10" y="50" width="20" height="35" rx="5" />
+                        <rect x="70" y="50" width="20" height="35" rx="5" />
+                        <path d="M5 70 H95" stroke-dasharray="2 4" stroke-width="1" />
+                    </svg>
+                    <h3>Meditação Guiada</h3>
+                    <p>Áudio alta qualidade (30min)</p>
+                    <p style="color: #999; text-decoration: line-through;">R$ 97</p>
+                </div>
+                <!-- 2 -->
+                <div class="value-card">
+                    <svg width="90" height="90" viewBox="0 0 100 100" fill="none" stroke="#C97BA5" stroke-width="3"
+                        style="margin-bottom: 25px;">
+                        <rect x="25" y="15" width="50" height="70" rx="2" />
+                        <path d="M25 15 L50 25 L75 15" />
+                        <line x1="35" y1="45" x2="65" y2="45" />
+                        <line x1="35" y1="60" x2="65" y2="60" />
+                    </svg>
+                    <h3>Guia 7 Sinais</h3>
+                    <p>PDF Exclusivo</p>
+                    <p style="color: #999; text-decoration: line-through;">R$ 47</p>
+                </div>
+                <!-- 3 -->
+                <div class="value-card">
+                    <svg width="90" height="90" viewBox="0 0 100 100" fill="none" stroke="#C97BA5" stroke-width="3"
+                        style="margin-bottom: 25px;">
+                        <circle cx="50" cy="50" r="30" />
+                        <circle cx="50" cy="50" r="40" stroke-dasharray="4 4" opacity="0.5" />
+                        <path d="M50 10 L50 90 M10 50 L90 50" stroke-width="1" opacity="0.3" />
+                    </svg>
+                    <h3>Acesso Anual</h3>
+                    <p>Pratique por 12 meses</p>
+                    <p style="color: #999; text-decoration: line-through;">R$ 97</p>
+                </div>
+            </div>
+
+            <div class="big-reveal">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="2"
+                    style="margin-bottom: 20px;">
+                    <path d="M20 40 L35 70 L50 30 L65 70 L80 40 L80 80 L20 80 Z" />
+                    <circle cx="20" cy="40" r="3" fill="#D4AF37" />
+                    <circle cx="50" cy="30" r="3" fill="#D4AF37" />
+                    <circle cx="80" cy="40" r="3" fill="#D4AF37" />
+                </svg>
+                <p>Valor total: <span style="text-decoration: line-through;">R$ 241</span></p>
+                <p>Seu investimento HOJE:</p>
+                <div
+                    style="font-family: var(--font-heading); font-size: 5rem; color: var(--color-gold); font-weight: 700; line-height: 1;">
+                    R$ 30</div>
+                <p style="color: var(--color-jade); margin-bottom: 40px;">ou 3x de R$ 10 sem juros</p>
+
+                <a href="#offer" class="cta-primary">
+                    <div class="pulsing-dot"></div>
+                    QUERO DESPERTAR MINHA MISSÃO AGORA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. AUTHORITY - BG Paper -->
+    <section class="section-padding bg-paper">
+        <div class="container" style="display: flex; gap: 60px; align-items: center; flex-wrap: wrap;">
+            <!-- CUSTOM FRAME: Circle of Lines (SVG - Reverted) -->
+            <div style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
+                <div style="position: relative;">
+                    <!-- Gold Line Circle SVG Frame -->
+                    <svg width="340" height="340" viewBox="0 0 100 100"
+                        style="position: absolute; top: -20px; left: -20px; z-index: 1;">
+                        <circle cx="50" cy="50" r="48" fill="none" stroke="#D4AF37" stroke-width="1" />
+                        <circle cx="50" cy="50" r="44" fill="none" stroke="#D4AF37" stroke-width="0.5"
+                            stroke-dasharray="2 2" />
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#D4AF37" stroke-width="0.2" opacity="0.5" />
+                        <g transform="rotate(45 50 50)">
+                            <line x1="50" y1="2" x2="50" y2="10" stroke="#D4AF37" stroke-width="2" />
+                            <line x1="50" y1="90" x2="50" y2="98" stroke="#D4AF37" stroke-width="2" />
+                            <line x1="2" y1="50" x2="10" y2="50" stroke="#D4AF37" stroke-width="2" />
+                            <line x1="90" y1="50" x2="98" y2="50" stroke="#D4AF37" stroke-width="2" />
+                        </g>
+                    </svg>
+                    <img src="assets/images/_MG_3301.jpg" alt="Mestra Gislaine"
+                        style="width: 300px; height: 300px; border-radius: 50%; object-fit: cover; position: relative; z-index: 2; border: 2px solid white;">
+                </div>
+            </div>
+
+            <div style="flex: 2; min-width: 300px;">
+                <h2>Mestra Gislaine Wahbe</h2>
+                <h4 style="color: var(--color-rose);">35 anos dedicados à transformação da consciência humana</h4>
+
+                <p>Mestra Gislaine combina neurociência, espiritualidade profunda e práticas ancestrais para despertar
+                    mulheres ao seu máximo potencial.</p>
+                <p>Fundadora do UCCAI e criadora da série viral "Gaia" (mais de 1 milhão de pessoas alcançadas), ela já
+                    guiou milhares de mulheres ao reencontro com sua missão de vida.</p>
+
+                <div class="quote-box">
+                    <p>"Eu não ensino a mulher a buscar fora. Eu guio a mulher a voltar para o centro — e agir com
+                        clareza."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. SOCIAL PROOF (Marquee + Image) - BG Gold Flowers -->
+    <section class="section-padding bg-gold-flowers">
+        <div class="container text-center">
+            <h2 style="font-size: 3rem; margin-bottom: 60px;">Mulheres Como Você Já Despertaram</h2>
+
+            <div style="position: relative; display: inline-block; margin-bottom: 60px;">
+                <img src="assets/images/IMG_5003 (1).jpg" alt="Comunidade Mestra Gi"
+                    style="max-width: 100%; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.1); border: 2px solid #D4AF37;">
+                <div
+                    style="position: absolute; bottom: -20px; right: -20px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #D4AF37;">
+                    <p style="margin: 0; font-weight: 700; color: var(--color-gold);">+ 5.000 Alunas</p>
+                </div>
+            </div>
+
+            <!-- Scrollable Marquee -->
+            <div class="marquee-wrapper">
+                <div class="marquee-content">
+                    <!-- 1 -->
+                    <div class="testimonial-card-marquee" style="text-align: left;">
+                        <div style="color: #D4AF37; margin-bottom: 10px;">★★★★★</div>
+                        <p style="font-style: italic;">"Acompanho a Mestra Gi há 5 anos e achei que já tinha visto tudo.
+                            Mas essa meditação desbloqueou uma camada que eu nem sabia que existia."</p>
+                        <p class="bold-gold">— Renata Vasconcellos</p>
+                    </div>
+                    <!-- 2 -->
+                    <div class="testimonial-card-marquee" style="text-align: left;">
+                        <div style="color: #D4AF37; margin-bottom: 10px;">★★★★★</div>
+                        <p style="font-style: italic;">"Sempre que acho que cheguei no meu teto, a Gi me mostra que o
+                            céu é infinito. Pratico com ela desde 2019 e, mais uma vez, fui surpreendida."</p>
+                        <p class="bold-gold">— Juliana Mendes</p>
+                    </div>
+                    <!-- 3 -->
+                    <div class="testimonial-card-marquee" style="text-align: left;">
+                        <div style="color: #D4AF37; margin-bottom: 10px;">★★★★★</div>
+                        <p style="font-style: italic;">"Já fiz todas as imersões presenciais, mas o poder desse áudio de
+                            30 minutos é inexplicável. É como ter a Mestra no meu ouvido todos os dias."</p>
+                        <p class="bold-gold">— Carla Diniz</p>
+                    </div>
+                    <!-- 4 -->
+                    <div class="testimonial-card-marquee" style="text-align: left;">
+                        <div style="color: #D4AF37; margin-bottom: 10px;">★★★★★</div>
+                        <p style="font-style: italic;">"Eu estava perdida há anos. Em 30 minutos, chorei, limpei e vi
+                            exatamente qual era o meu próximo passo."</p>
+                        <p class="bold-gold">— Ana Carolina M.</p>
+                    </div>
+                    <!-- 5 -->
+                    <div class="testimonial-card-marquee" style="text-align: left;">
+                        <div style="color: #D4AF37; margin-bottom: 10px;">★★★★★</div>
+                        <p style="font-style: italic;">"Mais profundo que cursos de R$ 2.000 que já fiz. A Mestra Gi tem
+                            uma
+                            voz que toca a alma."</p>
+                        <p class="bold-gold">— Patrícia S.</p>
+                    </div>
+                    <!-- 6 -->
+                    <div class="testimonial-card-marquee" style="text-align: left;">
+                        <div style="color: #D4AF37; margin-bottom: 10px;">★★★★★</div>
+                        <p style="font-style: italic;">"A clareza que eu senti na semana seguinte foi surreal. Sinais
+                            por todo lado!"</p>
+                        <p class="bold-gold">— Fernanda L.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. SCIENCE - BG Geo Turq -->
+    <section class="section-padding bg-geo-turq text-center">
+        <div class="container">
+            <h2>Por que essa prática funciona?</h2>
+            <p class="text-center" style="margin-bottom: 60px;">A neurociência já comprovou que:</p>
+
+            <div class="science-grid">
+                <!-- 1 -->
+                <div class="neuro-card text-left">
+                    <div class="neuro-step">01</div>
+                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#8B5CF6" stroke-width="2">
+                        <path d="M20 50 Q50 10 80 50" />
+                        <path d="M20 50 L80 50" stroke-dasharray="4 4">
+                            <animate attributeName="stroke-dashoffset" from="100" to="0" dur="2s"
+                                repeatCount="indefinite" />
+                        </path>
+                    </svg>
+                    <h3 class="neuro-title">Visualização Ativa</h3>
+                    <p class="neuro-desc"><strong>Neuroplasticidade:</strong> Seu cérebro não diferencia o real do
+                        imaginado. Criamos novas sinapses que "ensinam" sua mente a reconhecer oportunidades.</p>
+                </div>
+                <!-- 2 -->
+                <div class="neuro-card text-left">
+                    <div class="neuro-step">02</div>
+                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#EC4899" stroke-width="2">
+                        <circle cx="50" cy="50" r="30" />
+                        <circle cx="50" cy="50" r="3" fill="#EC4899">
+                            <animate attributeName="r" values="3;10;3" dur="2s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
+                    <h3 class="neuro-title">Gratidão Antecipada</h3>
+                    <p class="neuro-desc"><strong>Química Cerebral:</strong> Elevamos os níveis de Dopamina e
+                        Serotonina, colocando você em um estado vibracional de recepção magnética.</p>
+                </div>
+                <!-- 3 -->
+                <div class="neuro-card text-left">
+                    <div class="neuro-step">03</div>
+                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#06B6D4" stroke-width="2">
+                        <rect x="30" y="30" width="40" height="40" transform="rotate(45 50 50)" />
+                        <circle cx="50" cy="50" r="40" stroke-dasharray="4 4" />
+                    </svg>
+                    <h3 class="neuro-title">Estados Expandidos</h3>
+                    <p class="neuro-desc"><strong>Ondas Theta:</strong> Acessamos o subconsciente profundo, onde residem
+                        suas memórias ancestrais e sua intuição mais pura.</p>
+                </div>
+                <!-- 4 -->
+                <div class="neuro-card text-left">
+                    <div class="neuro-step">04</div>
+                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="2">
+                        <path d="M10 50 Q30 20 50 50 T90 50" />
+                        <path d="M10 50 Q30 80 50 50 T90 50" opacity="0.5" />
+                    </svg>
+                    <h3 class="neuro-title">Decretos de Poder</h3>
+                    <p class="neuro-desc"><strong>Reprogramação Linguística:</strong> Substituímos diálogos internos de
+                        dúvida por comandos claros de certeza e manifestação.</p>
+                </div>
+            </div>
+
+            <div class="neuro-card text-center"
+                style="margin-top: 60px; border-color: #D4AF37; background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(255,248,240,0.9));">
+                <h3
+                    style="font-family: var(--font-heading); color: var(--color-dark); margin-bottom: 30px; font-size: 2rem;">
+                    Mulher, chegou o momento de você se reconhecer.</h3>
+
+                <p style="font-size: 1.25rem; font-style: italic; color: #666; margin-bottom: 30px;">
+                    "Essas práticas não vão apenas relaxar você.<br>
+                    Elas vão ativar a tecnologia da vida que já existe em você."
+                </p>
+
+                <p style="font-size: 1.4rem; color: var(--color-gold); font-weight: 600; margin-bottom: 40px;">
+                    E quando essa tecnologia desperta...<br>
+                    sua realidade se reorganiza.
+                </p>
+
+                <div
+                    style="margin-top: 30px; border-top: 1px solid rgba(212,175,55,0.3); display: inline-block; padding-top: 20px;">
+                    <p
+                        style="font-family: 'Playfair Display', serif; font-size: 1.2rem; letter-spacing: 1px; color: var(--color-rose);">
+                        Mestra Gislaine Wahbe
+                    </p>
+                    <p style="font-size: 0.8rem; text-transform: uppercase; color: #999; letter-spacing: 2px;">MahaGi
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FAQ - BG Marble -->
+    <section class="section-padding bg-marble">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="text-center" style="margin-bottom: 60px;">Perguntas Frequentes</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-header">E se eu não tiver tempo? <span>+</span></div>
+                    <div class="faq-content">São 30 minutos que podem mudar sua vida inteira. Você não precisa fazer
+                        todos os dias. Mesmo uma única sessão já inicia o processo.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header">E se eu não conseguir visualizar? <span>+</span></div>
+                    <div class="faq-content">Não se preocupe. A prática funciona através da intenção e do sentimento,
+                        mesmo se você não "ver" imagens claras.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header">Isso funciona para qualquer crença? <span>+</span></div>
+                    <div class="faq-content">Sim. Esta prática é universal e respeita todas as crenças. Não é religiosa,
+                        é experiencial e neurocientífica.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header">Por quanto tempo tenho acesso? <span>+</span></div>
+                    <div class="faq-content">1 ano completo. Você pode praticar quantas vezes quiser, quando precisar
+                        reconectar.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. GUARANTEE - BG Geo Turq -->
+    <section class="section-padding bg-geo-turq">
+        <div class="container text-center"
+            style="border: 2px solid #D4AF37; padding: 100px 40px; border-radius: 20px; background: rgba(255,255,255,0.8);">
+            <svg width="120" height="120" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="3"
+                style="margin-bottom: 30px;">
+                <path d="M50 10 L85 25 V55 C85 80 50 95 50 95 C50 95 15 80 15 55 V25 L50 10 Z" />
+                <path d="M30 50 L45 65 L70 40" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h2 style="font-size: 2.8rem;">Garantia Incondicional de 7 Dias</h2>
+            <p style="max-width: 700px; margin: 0 auto;">
+                Sua jornada está protegida. Se por qualquer motivo você sentir que não é para você, devolvemos 100% do
+                seu investimento.
+                <br><br><strong>Sem perguntas. O risco é zero.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- 13. URGENCY - BG Vortex (Radial Gradient) -->
+    <!-- 13. URGENCY - BG Bokeh (Light Luxury) -->
+    <section class="section-padding bg-bokeh text-center">
+        <div class="container" style="position: relative; z-index: 2;">
+            <svg width="60" height="60" viewBox="0 0 100 100" fill="none" stroke="#D4AF37" stroke-width="2"
+                style="margin-bottom: 20px;">
+                <circle cx="50" cy="50" r="40" stroke-dasharray="4 4">
+                    <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="10s"
+                        repeatCount="indefinite" />
+                </circle>
+                <circle cx="50" cy="50" r="20" fill="#D4AF37" opacity="0.2">
+                    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite" />
+                </circle>
+            </svg>
+
+            <h2 style="font-size: 3.5rem; margin-bottom: 30px;">Este é o momento</h2>
+            <p style="max-width: 600px; margin: 0 auto 50px; color: var(--color-dark);">
+                Você chegou até aqui porque algo dentro de você reconheceu a verdade.
+                <br><strong>Sua missão está esperando.</strong>
+            </p>
+
+            <a href="#offer" class="cta-primary">
+                <div class="pulsing-dot"></div>
+                SIM, ESTOU PRONTA PARA DESPERTAR
+            </a>
+
+            <p style="margin-top: 30px; font-size: 0.9rem; color: #666;">
+                R$ 30 à vista ou 3x de R$ 10 • Acesso imediato
+            </p>
+        </div>
+    </section>
+
+    <!-- 14. FOOTER -->
+    <footer
+        style="background: #1F2937; color: rgba(255,255,255,0.7); padding: 60px 0; text-align: center; border-top: 2px solid #D4AF37;">
+        <div class="container">
+            <img src="assets/images/logo-nova.png" alt="Logo Mestra Gi"
+                style="max-width: 120px; margin-bottom: 20px; opacity: 0.8;">
+            <p style="font-size: 1rem;">Copyright 2026 - Mestra Gislaine Wahbe. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
