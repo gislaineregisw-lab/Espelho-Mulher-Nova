@@ -2,7 +2,7 @@
 # Define que é um site estático e usa o servidor Caddy (leve e rápido)
 
 [phases.setup]
-nixPkgs = ["caddy"]
+nixPkgs = ["caddy", "nodejs"]
 
 [phases.build]
 cmds = []
