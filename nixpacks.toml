@@ -1,0 +1,12 @@
+# Configuração para Deploy com Nixpacks (Dokploy)
+# Define que é um site estático e usa o servidor Caddy (leve e rápido)
+
+[phases.setup]
+nixPkgs = ["caddy"]
+
+[phases.build]
+cmds = []
+
+[start]
+# Inicia o servidor na porta 80, servindo os arquivos da pasta atual
+cmd = "caddy file-server --listen :80"
