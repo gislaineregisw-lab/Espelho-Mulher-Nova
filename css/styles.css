@@ -203,41 +203,56 @@ ul {
     background-position: center;
 }
 
-/* Testimonials Horizontal Scroll */
+/* Testimonials Horizontal Scroll (Infinite Marquee) */
 .marquee-wrapper {
     width: 100%;
-    /* Removed mask to prevent cut-off issues */
+    overflow: hidden;
+    /* Hide scrollbars and extra content */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .marquee-content {
     display: flex;
     gap: 30px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 20px 5%;
-    /* Side padding for better centering */
-    width: 100%;
-    -webkit-overflow-scrolling: touch;
-    /* Smooth scroll iOS */
-    scrollbar-width: none;
-    /* Firefox */
+    width: max-content;
+    /* Force single line */
+    padding: 20px 0;
+    /* Padding for shadow clearance */
+    animation: marquee 50s linear infinite;
+    /* Smooth auto-scroll */
 }
 
-.marquee-content::-webkit-scrollbar {
-    display: none;
-    /* Chrome/Safari */
+/* Pause animation on hover for readability */
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Move half the width (the first set of items) */
+    }
 }
 
 .testimonial-card-marquee {
-    width: 400px;
+    width: 450px;
+    min-width: 320px;
     background: white;
-    padding: 30px;
+    padding: 35px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Lighter shadow for smoothness */
     border: 1px solid rgba(212, 175, 55, 0.2);
     flex-shrink: 0;
-    scroll-snap-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    white-space: normal;
+    height: auto;
+    /* Removed scroll-snap stuff */
 }
 
 .testimonial-card-marquee:hover {
@@ -620,7 +635,12 @@ ul {
         /* Balanced font size */
         display: flex;
         line-height: 1.2;
+
         /* Tighter line height for multi-line button text */
+        .hero-logo {
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
 
