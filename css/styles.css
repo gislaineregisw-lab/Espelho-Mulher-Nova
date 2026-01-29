@@ -671,7 +671,70 @@ ul {
     .big-reveal {
         padding: 40px 20px;
     }
+
+    /* 9. Prevent Overflow Specifics */
+    /* Adjust Offer Card Padding */
+    .bg-paper .container>div {
+        padding: 30px 20px !important;
+        /* Override inline style for mobile */
+    }
+
+    /* Adjust Bonus Cards */
+    div[style*="background: white; border: 1px solid rgba(201, 123, 165, 0.3)"] {
+        padding: 25px 20px !important;
+    }
+
+    div[style*="background: white; border: 1px solid rgba(212, 175, 55, 0.3)"] {
+        padding: 25px 20px !important;
+    }
+
+    /* Adjust Marquee Card minimum width */
+    .testimonial-card-marquee {
+        width: 85vw;
+        min-width: 280px;
+        /* Safer for small screens */
+        padding: 25px 20px;
+        margin-right: 15px;
+        /* Ensure spacing */
+    }
+
+    /* Tweak Nav Buttons to not be cut off */
+    /* We'll move them slightly inside or ensure they have z-index and touch area */
+    .marquee-nav-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.95);
+        /* More solid */
+    }
+
+    .marquee-nav-btn.prev {
+        left: 0px;
+        /* Align with edge */
+    }
+
+    .marquee-nav-btn.next {
+        right: 0px;
+        /* Align with edge */
+    }
+
+    /* Ensure padding for arrows in marquee container */
+    .marquee-wrapper {
+        padding: 20px 0 30px 0;
+        /* Keep vertical padding */
+    }
+
+    /* Fix CTA Button padding */
+    .cta-primary {
+        padding: 16px 20px;
+        /* Reduced lateral padding */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 1.15rem;
+    }
 }
+
 /* Navigation Buttons for Testimonials */
 .marquee-nav-btn {
     position: absolute;
@@ -714,7 +777,7 @@ ul {
         height: 40px;
         font-size: 1.2rem;
     }
-    
+
     .marquee-nav-btn.prev {
         left: -10px;
     }
@@ -723,4 +786,3 @@ ul {
         right: -10px;
     }
 }
-
