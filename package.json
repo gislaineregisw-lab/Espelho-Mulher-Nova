@@ -1,6 +1,6 @@
 {
     "name": "projeto-missao-lp",
-    "version": "7.1.15",
+    "version": "7.1.16",
     "description": "Landing Page para o Projeto Missão",
     "scripts": {
         "dev": "vite",
