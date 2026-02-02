@@ -17,8 +17,24 @@
 
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Meta Pixel Managed by UTMify (ID: 69801e567cf6c4f5ec02c3d7) -->
-    <!-- Manual Pixel Code Removed to Avoid Duplication -->
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '914995294276987');
+        fbq('track', 'PageView');
+    </script>
+
+    <!-- End Meta Pixel Code -->
     <!-- Script UTMify -->
     <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
     <!-- End Script UTMify -->
@@ -26,6 +42,8 @@
 </head>
 
 <body>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=914995294276987&ev=PageView&noscript=1" /></noscript>
 
 
     <!-- 1. HERO SECTION (piclumen + particles) -->
@@ -1075,17 +1093,14 @@
             var ctaButtons = document.querySelectorAll('.cta-primary');
             ctaButtons.forEach(function (button) {
                 button.addEventListener('click', function () {
-                    // Check if fbq is defined (UTMify/Pixel loaded)
-                    if (typeof fbq === 'function') {
-                        fbq('track', 'InitiateCheckout', {
-                            content_name: 'Jornada Espelho da Mulher',
-                            content_category: 'Course',
-                            content_ids: ['JEM-001'],
-                            content_type: 'product',
-                            value: 600.00,
-                            currency: 'BRL'
-                        });
-                    }
+                    fbq('track', 'InitiateCheckout', {
+                        content_name: 'Jornada Espelho da Mulher',
+                        content_category: 'Course',
+                        content_ids: ['JEM-001'],
+                        content_type: 'product',
+                        value: 600.00,
+                        currency: 'BRL'
+                    });
                 });
             });
         });
