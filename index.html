@@ -1092,7 +1092,11 @@
         document.addEventListener('DOMContentLoaded', function () {
             var ctaButtons = document.querySelectorAll('.cta-primary');
             ctaButtons.forEach(function (button) {
-                button.addEventListener('click', function () {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault(); // Impede o redirecionamento imediato
+                    var url = this.getAttribute('href'); // Pega o link do botão
+
+                    // Dispara o evento do Facebook Pixel
                     fbq('track', 'InitiateCheckout', {
                         content_name: 'Jornada Espelho da Mulher',
                         content_category: 'Course',
@@ -1101,6 +1105,11 @@
                         value: 600.00,
                         currency: 'BRL'
                     });
+
+                    // Aguarda 300ms para garantir o envio do evento antes de redirecionar
+                    setTimeout(function () {
+                        window.location.href = url;
+                    }, 300);
                 });
             });
         });
