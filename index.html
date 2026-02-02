@@ -30,7 +30,7 @@
             s.parentNode.insertBefore(t, s)
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '914995294276987');
+        fbq('init', '914995294276987', { autoConfig: true });
         fbq('track', 'PageView');
     </script>
 
@@ -1092,7 +1092,14 @@
             var ctaButtons = document.querySelectorAll('.cta-primary');
             ctaButtons.forEach(function (button) {
                 button.addEventListener('click', function () {
-                    fbq('track', 'InitiateCheckout');
+                    fbq('track', 'InitiateCheckout', {
+                        content_name: 'Jornada Espelho da Mulher',
+                        content_category: 'Course',
+                        content_ids: ['JEM-001'],
+                        content_type: 'product',
+                        value: 600.00,
+                        currency: 'BRL'
+                    });
                 });
             });
         });
