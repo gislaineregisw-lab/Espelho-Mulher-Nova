@@ -32,6 +32,11 @@
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1521249325605350');
         fbq('track', 'PageView');
+        fbq('track', 'ViewContent', {
+            content_name: 'Jornada Espelho da Mulher',
+            value: 600,
+            currency: 'BRL'
+        });
     </script>
 
     <!-- End Meta Pixel Code -->
@@ -135,9 +140,10 @@
             </div>
 
             <div style="margin-top: 40px;">
-                <a href="https://pay.hotmart.com/P104198475T?bid=1769996639294" class="cta-primary">
+                <a href="https://form.jotform.com/260338685883067" class="cta-primary cta-button" target="_blank"
+                    onclick="fbq('track', 'Lead', {content_name: 'Formulário Espelho da Mulher'});">
                     <div class="pulsing-dot"></div>
-                    Acessar o Espelho da Mulher!
+                    QUERO ENTRAR NA JORNADA
                 </a>
             </div>
         </div>
@@ -662,10 +668,11 @@
                     </ul>
                 </div>
 
-                <a href="https://pay.hotmart.com/P104198475T?bid=1769996639294" class="cta-primary"
-                    style="width: 100%; max-width: 450px;">
+                <a href="https://form.jotform.com/260338685883067" class="cta-primary cta-button"
+                    style="width: 100%; max-width: 450px;" target="_blank"
+                    onclick="fbq('track', 'Lead', {content_name: 'Formulário Espelho da Mulher'});">
                     <div class="pulsing-dot"></div>
-                    SIM, EU QUERO OLHAR NO MEU ESPELHO
+                    QUERO ENTRAR NA JORNADA
                 </a>
                 <div style="display: flex; justify-content: center; gap: 15px; margin-top: 25px; opacity: 0.7;">
                     <img src="https://logospng.org/download/pix/logo-pix-icone-512.png" alt="Pix" style="height: 25px;">
@@ -846,9 +853,10 @@
             </div>
 
             <div class="text-center" style="margin-top: 50px;">
-                <a href="https://pay.hotmart.com/P104198475T?bid=1769996639294" class="cta-primary">
+                <a href="https://form.jotform.com/260338685883067" class="cta-primary cta-button" target="_blank"
+                    onclick="fbq('track', 'Lead', {content_name: 'Formulário Espelho da Mulher'});">
                     <div class="pulsing-dot"></div>
-                    Eu escolho o Caminho 2!
+                    QUERO ENTRAR NA JORNADA
                 </a>
             </div>
         </div>
@@ -896,9 +904,10 @@
             </div>
 
             <div style="margin-bottom: 30px;">
-                <a href="https://pay.hotmart.com/P104198475T?bid=1769996639294" class="cta-primary">
+                <a href="https://form.jotform.com/260338685883067" class="cta-primary cta-button" target="_blank"
+                    onclick="fbq('track', 'Lead', {content_name: 'Formulário Espelho da Mulher'});">
                     <div class="pulsing-dot"></div>
-                    QUERO ME PRIORIZAR AGORA
+                    QUERO ENTRAR NA JORNADA
                 </a>
             </div>
 
@@ -1007,9 +1016,9 @@
                 </div>
 
                 <div>
-                    <a href="https://pay.hotmart.com/P104198475T?bid=1769996639294" class="cta-primary">QUERO SER
-                        GUIADA
-                        PELA MESTRA GI</a>
+                    <a href="https://form.jotform.com/260338685883067" class="cta-primary cta-button" target="_blank"
+                        onclick="fbq('track', 'Lead', {content_name: 'Formulário Espelho da Mulher'});">QUERO ENTRAR NA
+                        JORNADA</a>
                 </div>
             </div>
 
@@ -1053,9 +1062,10 @@
             </div>
 
             <div style="text-align: center; margin-top: 50px;">
-                <a href="https://pay.hotmart.com/P104198475T?bid=1769996639294" class="cta-primary">
+                <a href="https://form.jotform.com/260338685883067" class="cta-primary cta-button" target="_blank"
+                    onclick="fbq('track', 'Lead', {content_name: 'Formulário Espelho da Mulher'});">
                     <div class="pulsing-dot"></div>
-                    Acessar o Espelho da Mulher!
+                    QUERO ENTRAR NA JORNADA
                 </a>
             </div>
         </div>
@@ -1088,32 +1098,8 @@
     <script type="module" src="js/scripts.js"></script>
 
     <!-- Facebook Pixel Event Tracking -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var ctaButtons = document.querySelectorAll('.cta-primary');
-            ctaButtons.forEach(function (button) {
-                button.addEventListener('click', function (e) {
-                    e.preventDefault(); // Impede o redirecionamento imediato
-                    var url = this.getAttribute('href'); // Pega o link do botão
+    <!-- Conflicting Script Removed -->
 
-                    // Dispara o evento do Facebook Pixel
-                    fbq('track', 'InitiateCheckout', {
-                        content_name: 'Jornada Espelho da Mulher',
-                        content_category: 'Course',
-                        content_ids: ['JEM-001'],
-                        content_type: 'product',
-                        value: 600.00,
-                        currency: 'BRL'
-                    });
-
-                    // Aguarda 300ms para garantir o envio do evento antes de redirecionar
-                    setTimeout(function () {
-                        window.location.href = url;
-                    }, 300);
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>
