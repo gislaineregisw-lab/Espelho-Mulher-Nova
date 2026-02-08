@@ -1,0 +1,61 @@
+<!-- CÓDIGO CORRIGIDO PARA PÁGINA DE AGRADECIMENTO DO JOTFORM -->
+<!-- COPIE E COLE ESTE CÓDIGO NO CAMPO "SOURCE CODE" DA PÁGINA DE AGRADECIMENTO -->
+
+<!-- 1. Meta Pixel Code (ADICIONADO: Script Completo) -->
+<script>
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+
+    // 2. Inicializa o Pixel
+    fbq('init', '1521249325605350');
+
+    // 3. Registra a visualização da página (básico)
+    fbq('track', 'PageView');
+
+    // 4. REGISTRA O CADASTRO (Importante para otimizar anúncios)
+    fbq('track', 'CompleteRegistration', {
+        content_name: 'Formulário Espelho da Mulher - Sucesso',
+        status: 'completed'
+    });
+</script>
+<noscript>
+    <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1521249325605350&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- SEU CÓDIGO VISUAL ORIGINAL (MANTIDO) -->
+<div class="wrapper" contenteditable="false">
+    <div class="col-1" contenteditable="false"><img class="tyBgImage"
+            src="https://cdn.jotfor.ms/img/Thankyou-iconV2.png?v=0.1" alt="thank you icon" /></div>
+    <div class="col-2" contenteditable="true">
+        <div class="thankyou-wrapper">
+            <p class="thank-you-icon" style="text-align: center;"><img class="notActiveTyIcon" style="display: none;"
+                    src="https://cdn.jotfor.ms/img/Thankyou-iconV2.png?v=0.1" alt="" width="153" height="156" /></p>
+            <div style="text-align: center;">
+                <h1 class="thankyou-main-text ty-text" style="text-align: center;"><span dir="auto"
+                        style="vertical-align: inherit;"><span dir="auto" style="vertical-align: inherit;"><span
+                                dir="auto" style="vertical-align: inherit;"><span dir="auto"
+                                    style="vertical-align: inherit;"><span dir="auto"
+                                        style="vertical-align: inherit;"><span dir="auto"
+                                            style="vertical-align: inherit;">Gratid&atilde;o
+                                            Infinita!</span></span></span></span></span></span></h1>
+                <p class="thankyou-sub-text ty-text" style="text-align: center;"><span dir="auto"
+                        style="vertical-align: inherit;"><span dir="auto" style="vertical-align: inherit;"><span
+                                dir="auto" style="vertical-align: inherit;"><span dir="auto"
+                                    style="vertical-align: inherit;"><span dir="auto"
+                                        style="vertical-align: inherit;"><span dir="auto"
+                                            style="vertical-align: inherit;">Sua inscri&ccedil;&atilde;o foi
+                                            recebida.</span></span></span></span></span></span></p>
+            </div>
+        </div>
+    </div>
